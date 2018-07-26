@@ -2,11 +2,13 @@
 百度-西交大·大数据竞赛2018复赛——商家招牌智能检测
 
 1.代码运行环境
+
 Python 3.5.3
 Keras 2.1.3
 Tensorflow 1.4.0-rc0
 
 2.文件系统结构
+
 .
 │   ├── font 结果可视化时label的字体文件
 
@@ -34,6 +36,7 @@ Tensorflow 1.4.0-rc0
        └── train
 
 3.使用方法
+
 预测
 将训练好的模型文件yolo.h5放置于BaiduFusai/model_data文件夹中，运行BaiduFusai/yolo.py即可。
 训练
@@ -43,6 +46,7 @@ Tensorflow 1.4.0-rc0
 在预测之后，会给出生成BaiduFusai/result/YOLOv3.csv，使用utils/draw_result.py可以根据此文件绘制可视化结果。
 
 4.算法说明
+
 算法使用目标检测中著名的YOLOv3，模型主干来源于GitHub的开源项目(https://github.com/qqwweee/keras-yolo3)。
 对于本赛题，我们首先做了一些数据预处理，使得输入数据满足模型定义的格式。该模型的label文件格式为
 Image_file_path box1 box2 … boxN
@@ -57,4 +61,5 @@ box格式为 x_min,y_min,x_max,y_max,class_id(无空格)
 超参数的选择主要有iou, score阈值，图片尺寸等。调整前两项并不需要重新训练模型。
 
 5.致谢
+
 感谢队友给力的工作以及对我的指导！队友大佬的飞机票》》https://github.com/MoZhonglin
